@@ -1,0 +1,537 @@
+:root
+    --color-white:#fff
+    --color-light: #f0eff5
+    --color-gray-light: #86848c
+    --color-gray-dark: #56555e
+    --color-dark: #27282f
+    
+$color-white: #ffffff
+$color-light: #f0eff5
+$color-gray-light: #86848c
+$color-gray-dark: #56555e
+$color-dark: #27282f
+$color-primary: rgb(71,7,234)
+$color-success: rgb(34, 202, 75)
+$color-danger: rgb(255, 67, 54)
+$color-warning: rgb(234, 181, 7)
+$color-purple: rgb(160, 99, 245)
+
+$color-primary-light: rgba(71, 7, 234, 0.2)
+$color-success-light: rgba(34, 202, 75, 0.2)
+$color-danger-light: rgba(255, 67, 54, 0.2)
+$color-purple-light: rgba(160, 99, 245, 0.2)
+
+$card-padding: 1.6rem
+$padding-1: 1rem
+$padding-2: 8px
+
+$card-border-radius: 1.6rem
+$border-radius-1: 1rem
+$border-radius-2: 6px 
+
+.dark-theme
+    --color-white: #131316
+    --color-light: #23232a
+    --color-dark: #ddd
+    --color-gray-dark: #adacb5
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
+ 
+
+*
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    appearance: none
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+
+html
+    font-size: 12px
+
+body
+    background: var(--color-light)
+    font-family: Poppins, sans-serif
+    min-height: 100vh
+    color: var(--color-dark)
+
+img
+    width: 100%
+
+h1
+    font-size: 2.2rem
+h2
+    font-size: 1.5rem
+h3
+    font-size: 1.2rem
+h4
+    font-size: 1rem
+h5
+    font-size: 0.86rem
+h6
+    font-size: 0.76rem
+p
+    font-size: 0.86rem
+    color: var(--color-gray-dark)
+
+small
+    font-weight: 300
+    font-size: 0.77rem
+
+.text-muted
+    color: $color-gray-light
+
+.primary
+    color: $color-primary
+
+
+.danger
+    color: $color-danger
+
+
+.success
+    color: $color-success
+
+
+.purple
+    color: $color-purple
+
+.bg-primary
+    background: $color-primary
+    box-shadow: 0 0.8rem 0.8rem $color-primary-light
+
+
+.bg-danger
+    background: $color-danger
+    box-shadow: 0 0.8rem 0.8rem $color-danger-light
+
+
+.bg-success
+    background: $color-success
+    box-shadow: 0 0.8rem 0.8rem $color-success-light
+
+
+.bg-purple
+    background: $color-purple
+    box-shadow: 0 0.8rem 0.8rem $color-purple-light
+
+.bg-dark
+    background: #27282f
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2)
+
+.bg-purple-light
+    background: $color-purple-light
+.bg-danger-light
+    background: $color-danger-light
+.bg-primary-light
+    background: $color-primary-light
+.bg-success-light
+    background: $color-success-light
+
+nav
+    width: 100%
+    background: var(--color-white)
+    padding: 1rem 0
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        width: 96%
+        margin: 0 auto
+    img.logo
+        width: 7rem
+    .search-bar
+        background: var(--color-light)
+        padding: $padding-2 $card-padding
+        width: 32vw
+        border-radius: $border-radius-2
+        display: flex
+        align-items: center
+        gap: 1rem
+        color: $color-gray-light
+        position: absolute
+        left: 15%
+        input
+            color: var(--color-dark)
+            background: transparent
+            width: 100%
+            &:placeholder
+                color: var(--color-gray-dark)
+    .profile-area
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 4rem
+        .theme-btn
+            display: flex
+            background: var(--color-light)
+            width: 5rem
+            height: 2rem
+            border-radius: $border-radius-2
+            cursor: pointer
+            span
+                width: 50%
+                height: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 1.3rem
+            .active
+                background: var(--color-dark)
+                border-radius: $border-radius-2
+                color: var(--color-white)
+        .profile
+            display: flex
+            gap: 1rem
+            align-items: center
+        .profile-photo
+            display: block
+            width: 3rem
+            height: 3rem
+            border-radius: 50%
+            overflow: hidden
+        button
+            display: none
+
+main
+    display: grid
+    grid-template-columns: 16rem auto 30rem
+    gap: 2rem
+    width: 96%
+    margin: 1rem auto 4rem
+    aside
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 88vh
+        button#close-btn
+            display: none 
+        .updates
+            background: var(--color-white)
+            border-radius: $border-radius-1
+            text-align: center
+            padding: $card-padding
+            span
+                font-size: 2.8rem
+            h4
+                margin: 1rem 0
+            a
+                display: block
+                width: 100%
+                background: $color-primary
+                color: var(--color-white)
+                border-radius: $border-radius-1
+                padding: 0.8rem 0
+                margin-top: 2rem
+                transition: all 300ms ease
+                &:hover
+                    box-shadow: 0 1rem 2rem $color-primary-light
+        .sidebar
+            h4
+                font-weight: 500
+            a
+                display: flex
+                align-items: center
+                gap: 1.2rem
+                height: 4.2rem
+                color: $color-gray-light
+                position: relative
+                span
+                    font-size: 1.7rem
+                    margin-left: 3rem
+                    transition: all 300ms ease
+main aside .sidebar a.active
+    background: var(--color-white)
+    color: $color-primary
+main aside .sidebar a.active:before
+    content: ''
+    width: 6px
+    height: 100%
+    position: absolute
+    background: $color-primary
+        
+main aside .sidebar a:hover
+    color: $color-primary
+    span
+        margin-left: 2rem
+
+
+
+main
+    section.middle
+        .header
+            display: flex
+            align-items: center
+            gap: 1rem
+            input[type='date']
+                padding: 0.5rem 2rem
+                border-radius: $border-radius-2
+                background: var(--color-white)
+                color: var(--color-gray-dark)
+        .cards
+            margin-top: 1rem
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 1.5rem
+            .card
+                background: linear-gradient(#ff796f, #bd261b)
+                padding: $card-padding
+                border-radius: $card-border-radius
+                color: var(--color-white)
+                height: 16rem
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                box-shadow: 0 2rem 3rem $color-danger-light
+                transition: all 300ms ease
+                min-width: 24rem
+                &:nth-child(2)
+                    background: linear-gradient(#7f8191, #27282f)
+                    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2)
+                &:nth-child(3)
+                    background: linear-gradient(#5d70ff, #5719c2)
+                    box-shadow: 0 2rem 3rem $color-primary-light
+                &:hover
+                    box-shadow: none
+
+main section.middle .card .top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    img.right
+        width: 3.5rem
+    .left
+        display: flex
+        gap: 0.5rem
+        img
+            width: 2.3rem
+            height: 2.3rem
+            border: 1px solid white
+            border-radius: $border-radius-2
+            padding: 0.4rem
+        h2
+            font-weight: 200
+            font-size: 1.4rem
+
+main section.middle .card .middle
+    display: flex
+    justify-content: space-between
+    .chip
+        width: 3.5rem
+
+main section.middle .card .bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    .right
+        display: flex
+        gap: 2rem
+
+main
+    .monthly-report
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 1rem
+        justify-content: space-between
+        margin-top: 2rem
+        h1
+            font-weight: 700
+            font-size: 1.8rem
+
+
+main
+    .fast-payment
+        margin-top: 2rem
+        display: flex
+        align-self: center
+        gap: 2rem
+        .badges
+            display: flex
+            gap: 1rem
+            align-self: center
+            flex-wrap: wrap
+            max-width: 100%
+        .badge
+            div
+                display: flex
+                gap: 2rem
+                align-self: center
+            span
+                width: 7px
+                height: 7px
+                border-radius: 50%
+            padding: 0.6rem $card-padding
+            background: var(--color-white)
+            border-radius: $border-radius-2
+            display: flex
+            align-items: center
+            gap: 1rem
+            transition: all 300ms ease
+
+main .fast-payment .badge:first-child span
+    display: flex
+    align-self: center
+    justify-content: center
+    height: fit-content
+    font-size: 1.5rem
+
+main .fast-payment .badge:hover
+    box-shadow: 0 0 1.5rem $color-primary-light
+    cursor: pointer
+
+
+canvas#chart
+    background: var(--color-white)
+    max-width: 100%
+    margin-top: 2rem
+    border-radius: $card-border-radius
+    padding: $card-padding
+    
+
+main 
+    section.right 
+        .investments
+            background: var(--color-white)
+            border-radius: $card-border-radius
+            img
+                width: 2.4rem
+            .header
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding: $card-padding
+                padding-bottom: 0
+                a
+                    display: flex
+                    align-items: center
+                    color: $color-primary
+            .investment
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: $card-padding
+                border-bottom: 1px solid var(--color-light)
+                transition: all 300ms ease
+                &:last-child
+                    border: none
+                &:hover
+                    background: var(--color-light)
+                    cursor: pointer
+
+
+main
+    .recent-transactions
+        .header
+            display: flex
+            justify-content: space-between
+            margin-bottom: 1rem
+            a
+                display: flex
+                align-items: center
+                color: $color-primary
+
+        margin-top: 2rem
+        img
+            width: 2.2rem
+        .transaction
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 1.5rem $card-padding
+            border-radius: $card-border-radius
+            &:hover
+                background: var(--color-white)
+                cursor: pointer
+            .service
+                display: flex
+                gap: 1rem
+                .icon
+                    padding: $padding-2
+                    border-radius: $border-radius-1
+                    display: flex
+                    align-items: center
+        .card-details
+            display: flex
+            align-items: center
+            gap: 1rem
+            .card
+                display: flex
+                width: 4.6rem
+                height: 3rem
+                align-items: center
+                justify-content: center
+                border-radius: $border-radius-2  
+
+
+
+@media screen and (max-width: 1024px)
+    nav .search-bar
+        display: none
+    nav .profile-area
+        gap: 2rem
+        button#menu-btn
+            display: inline
+            background: transparent 
+            color: var(--color-dark)
+    main
+        grid-template-columns: 1fr
+        aside
+            position: fixed
+            top: 0
+            left: -100%
+            z-index: 3
+            background: var(--color-white)
+            width: 22rem
+            height: 100vh
+            box-shadow: 2rem 0 2rem $color-primary-light
+            display: none
+            animation: showSidebar 500ms ease forwards
+            button#close-btn
+                display: inline-block
+                width: 3rem
+                height: 3rem
+                position: absolute
+                top: 1rem
+                right: 1rem
+                z-index: 4
+                background: transparent
+                color: var(--color-dark)
+            .sidebar
+                margin-top: 4rem
+            .updates
+                display: none
+        section.middle
+            .cards
+                grid-template-columns: 1fr 1fr
+        canvas
+            margin: 3rem 0 1rem
+        section.right .recent-transactions
+            margin-top: 3rem
+    button:hover
+        cursor: pointer
+
+@keyframes showSidebar
+        to
+            left: 0
+
+
+@media screen and (max-width: 600px)
+    nav 
+        .profile-area
+            gap: 2.6rem
+    nav .profile h5,
+    nav .profile span
+        display: none
+    main
+        section.middle .cards
+            grid-template-columns: 1fr
+        section.middle .fast-payment
+            flex-direction: column
+            align-items: flex-start
+            margin-top: 3rem
+            gap: 1.4rem
+        
+         
